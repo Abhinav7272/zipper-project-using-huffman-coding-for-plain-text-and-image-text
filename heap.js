@@ -69,17 +69,17 @@
          }
      }
  }
- function runheap(){
-    let  op = document.getElementById("output");
+//  function runheap(){
+//     let  op = document.getElementById("output");
 
-     let mxheap= new BinaryHeap;
-       let arr  = [[1,1],[2,1], [8,1], [3,1] ,[5,1],[6,1]] ;
-       for( let i = 0 ;i < 6 ;i++){
-           mxheap.insert(arr[i]);
-       }
-       while(!mxheap.empty()){
-           let a = mxheap.extractMax();
-           let val = op.textContent;
-           op.textContent = val+"->"+a;
-       }
- }
+//      let mxheap= new BinaryHeap;
+//        let arr  = [[1,1],[2,1], [8,1], [3,1] ,[5,1],[6,1]] ;
+//        for( let i = 0 ;i < 6 ;i++){
+//            mxheap.insert(arr[i]);
+//        }
+//        while(!mxheap.empty()){
+//            let a = mxheap.extractMax();
+//            let val = op.textContent;
+//            op.textContent = val+"->"+a;
+//        }
+//  }
