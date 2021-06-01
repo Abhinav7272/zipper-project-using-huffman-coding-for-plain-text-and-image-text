@@ -1,5 +1,5 @@
 
-//  export { BinaryHeap }
+ export { BinaryHeap }
  class BinaryHeap {
  
      constructor() {
