@@ -17,8 +17,16 @@ class HuffmanCoder{
         // inorder traversal
         return '0' + this.stringify(node[1][0]) + '1' + this.stringify(node[1][1]);
     }
+
+
+
+
+
+
   
     display(node, modify, index=1){
+        // display function call modify is true for encrption
+
         if(modify){
             node = ['',node];
             if(node[1].length===1)
@@ -35,6 +43,13 @@ class HuffmanCoder{
         return res + '\n' + left + '\n' + right;
     }
 
+
+
+
+
+
+   //0'a10'b'c
+//    is the format of tree 
     destringify(data){
         let node = [];
         if(data[this.ind]==='\''){
@@ -53,6 +68,12 @@ class HuffmanCoder{
 
         return node;
     }
+
+
+
+
+
+
     // here , we are going to apply  dfs or say we are going to traverse the tree.
     getMappings(node, path){
         // if we get object means that we are not at the leaf node , but we have 
@@ -69,6 +90,11 @@ class HuffmanCoder{
         this.getMappings(node[1][1], path+"1");
     }
     // here data is whatever your text was .
+
+
+
+
+
 
     encode(data){
 
@@ -167,8 +193,16 @@ class HuffmanCoder{
        return [final_res, this.display(huffman_encoder, false), info];
     }
 
+
+
+
+
+
     decode(data){
+        // splitting tree , rem zero , and data 
         data = data.split('\n');
+
+        // for \n character in between para 
         if(data.length===4){
             // Handling new line
             data[0] = data[0] + '\n' + data[1];
@@ -178,8 +212,12 @@ class HuffmanCoder{
         }
 
         this.ind = 0;
+        // geting tree
         const huffman_decoder = this.destringify(data[0]);
+      
         const text = data[2];
+
+        // geting back the binar string  from encoded text
 
         let binary_string = "";
         for(let i=0;i<text.length;i++){
@@ -189,11 +227,15 @@ class HuffmanCoder{
                 bin = num%2 + bin;
                 num = Math.floor(num/2);
             }
+            // getting binary string
             binary_string = binary_string + bin;
         }
+        // removing padding
+
         binary_string = binary_string.substring(0,binary_string.length-data[1]);
 
         console.log(binary_string.length);
+
 
         let res = "";
         let node = huffman_decoder;
@@ -203,12 +245,16 @@ class HuffmanCoder{
             } else{
                 node = node[1];
             }
+            // checking for leaf 
+            // back to root
 
             if(typeof(node[0])==="string"){
                 res += node[0];
                 node = huffman_decoder;
             }
         }
+
+        // display  
         let info = "Decompression complete and file sent for download";
         return [res, this.display(huffman_decoder, true), info];
     }
