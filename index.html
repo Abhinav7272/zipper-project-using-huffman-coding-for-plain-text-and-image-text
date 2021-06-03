@@ -4,11 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FileZipper</title>
+    <link rel="stylesheet" href="style.css">
     <script src="heap.js"></script>
+    <script src="huffman.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
 </head>
 <body>
-    <button onclick="runheap()">run program</button>
-    <div id = "output"> </div>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://img.icons8.com/ios-filled/50/000000/compressor.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Compressor
+        </a>
+        <div>
+            Abhinav Kumar Gaur 
+        </div>
+      </nav>
+      <!-- <div id="steps"> 
+        <img src="https://img.icons8.com/ultraviolet/40/000000/human-footprints.png"/>
+      </div> -->
+      <br>
+      <br>
+      <h3>
+      📁
+      Compressor For text file.
+      <small class="text-muted">compress your files now!!</small>
+    </h3>
+    <h5>
+    <small class="text-muted">Files are compressed and decompressed with huffman decoder and ecoder!!</small>
+    </h5>
+    <h5>
+        <small class="text-muted">Files are also encryted and decrypted using the same tool!!</small>
+    </h5>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="formm">
+        <form method="post" enctype="multipart/form-data" style="display: inline-block;">
+            <input type="file" id="uploadedFile" class="btn btn-danger center_buttons"/>
+        </form>
+        <br>
+        <br>
+        
+        <button type="button" class="btn  center_buttons" id="encode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Encode 🔒&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <button type="button" class="btn  center_buttons" id="decode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decode  🔑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    </div>
+
+    <div id="container">
+   
+        <div class="text_box">
+            <span id="temptext" style="width: 100%; text-align: center; font-size: x-large;">
+                Operation info will be shown here !!
+            </span>
+        </div>
+        <div class="text_box" style="overflow-y: scroll">
+            <span id="treearea" style="width: 100%; text-align: center; font-size: medium;">
+                Tree Structure Will Be Displayed Here !!
+            </span>
+        </div>
+    </div> 
+    <div>
+    </div>
+    <br><br>
+    <h3>
+        📁
+    Compressor For images.
+    <small class="text-muted">Coming soon!</small>
+  </h3>
+  <h5>
+  <small class="text-muted">Text in images is First extracted and then decoded!!</small>
+  </h5>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">beta-version:
+      <a href="https://www.linkedin.com/in/abhinav-gaur-74204a1b5/"> 🌻Monks_community</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
 </body>
 </html>
