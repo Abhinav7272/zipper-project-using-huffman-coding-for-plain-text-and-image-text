@@ -184,9 +184,10 @@ class HuffmanCoder{
        // final result = tree string+ exta zero + or reduced string.
         
        // calculating compression %
-       let info = "Compression Ratio : " + data.length/final_res.length;
        
-       info = "Compression complete and file sent for download" + '\n' + info;
+       let info = " 📉Compression Ratio : " + data.length/final_res.length;
+   
+       info = " 🎲Compression complete and file sent for download" + '\n' + info;
        
        
        // call display 
@@ -254,8 +255,9 @@ class HuffmanCoder{
             }
         }
 
-        // display  
-        let info = "Decompression complete and file sent for download";
+        // display
+         
+        let info = "📀 Decompression complete and file sent for download";
         return [res, this.display(huffman_decoder, true), info];
     }
 }
